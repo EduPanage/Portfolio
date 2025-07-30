@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eduardo | Portfólio</title>
+    <link rel="stylesheet" href="static/style.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navegacao" aria-label="Menu principal">
+            <div class="container">
+                <ul class="menu">
+                    <li><a href="#inicio" class="menu-link">Início</a></li>
+                    <li><a href="#sobre" class="menu-link">Sobre Mim</a></li>
+                    <li><a href="#projetos" class="menu-link">Projetos</a></li>
+                    <li><a href="#contatos" class="menu-link">Contato</a></li>
+                    <li><a href="#curriculo" class="menu-link">Currículo</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="cabecalho">
+            <div class="perfil">
+                <img src="images/Img-Perfil.jpg" alt="Foto do Eduardo Panage Avila" class="foto-perfil" />
+                <h1>Eduardo Panage Avila</h1>
+                <p class="sub-titulo"><span id="texto-digitando"></span><span class="cursor">|</span></p>
+            </div>
+        </section>
+
+        <section id="sobre" class="sobre">
+            <h2 class="sobre-titulo">Sobre Mim</h2>
+            <div class="sobre-caixa">
+                <p>
+                    Meu nome é Eduardo Panage Avila, tenho 21 anos e estudo na área de programação há cerca de 4 anos,
+                    desde o início da minha graduação em Engenharia de Software pelo Centro Universitário
+                    da Grande Dourados – UNIGRAN.
+                    Sou apaixonado por tecnologia e encontrei na programação minha verdadeira vocação. Ao longo da minha
+                    trajetória, venho me dedicando ao estudo e à aplicação de diversas linguagens e ferramentas, com
+                    ênfase em desenvolvimento Web e na linguagem Python, utilizando o framework Django como principal
+                    base para construção de aplicações robustas e escaláveis.
+                    Estou em constante busca por novos conhecimentos e desafios que contribuam para minha evolução
+                    profissional e me permitam criar soluções eficazes, modernas e alinhadas às necessidades reais dos
+                    usuários e do mercado.
+                </p>
+            </div>
+        </section>
+
+        <section id="projetos" class="projetos">
+            <h2 class="projetos-titulo">Meus Projetos</h2>
+            <div class="projetos-caixa">
+                <a href="https://github.com/EduPanage/Sistema-de-Login-SSO" class="projetos-link">
+                    <article class="projetos-card">
+                        <img src="images/Projeto 1.jpg" alt="Screenshot do sistema de login" class="projetos-imagem" />
+                        <h3 class="info-projetos">Sistema de Login</h3>
+                        <p class="paragrafo-projetos">
+                            Sistema de cadastro e login vinculando as informações do usuário a cada acesso realizado,
+                            com
+                            registro de logins.
+                        </p>
+                    </article>
+                </a>
+                <a href="https://github.com/EduPanage/ControleAbastecimento" class="projetos-link">
+                    <article class="projetos-card">
+                        <img src="images/Projeto 2.jpg" alt="Screenshot do sistema de gerenciamento de veículos"
+                            class="projetos-imagem" />
+                        <h3 class="info-projetos">Gerenciamento de Veículos</h3>
+                        <p class="paragrafo-projetos">
+                            Sistema de cadastro de veículos com controle de abastecimento e km rodados e autonomia do
+                            veículo.
+                        </p>
+                    </article>
+                </a>
+                <a href="aviso.html" class="projetos-link">
+                    <article class="projetos-card">
+                        <img src="images/Projeto 3.webp" alt="Screenshot da loja de roupas online"
+                            class="projetos-imagem" />
+                        <h3 class="info-projetos">Loja de Roupas</h3>
+                        <p class="paragrafo-projetos">
+                            Página simulando uma loja de roupas online com a apresentação dos itens, cadastro no
+                            carrinho,
+                            cadastro de usuário e finalização de compra via Whatsapp.
+                        </p>
+                    </article>
+                </a>
+            </div>
+        </section>
+
+        <section id="contatos" class="contatos">
+            <h2 class="contatos-titulo">Contato</h2>
+            <form action="https://formspree.io/f/mjkooybd" method="POST" class="formulario-contato" id="formulario">
+                <input type="text" name="name" placeholder="Seu nome" required />
+                <input type="email" name="email" placeholder="Seu e-mail" required />
+                <textarea name="message" placeholder="Sua mensagem" required></textarea>
+                <button class="contatos-botao" type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="curriculo" class="curriculo">
+            <h2 class="curriculo-titulo">Currículo</h2>
+            <div class="curriculo-botao">
+                <a href="Curriculum Eduardo Panage Avila.pdf" download class="btn-download">Download Currículo</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Eduardo Panage Avila. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="static/script.js"></script>
+</body>
+
+</html>
