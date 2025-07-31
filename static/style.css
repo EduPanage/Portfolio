@@ -36,7 +36,7 @@ footer {
   color: rgba(255, 255, 255, 0.5);
   background-color: var(--maisEscuro);
   max-width: none;
-  
+
 }
 
 /* Navegação */
@@ -186,7 +186,7 @@ h1 {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  
+
 }
 
 .projetos-card {
@@ -321,4 +321,47 @@ h1 {
 .btn-download:hover {
   background-color: var(--secundaria);
   box-shadow: 0 8px 18px rgba(124, 58, 237, 0.6);
+}
+
+/* ícones sociais no rodapé */
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--primaria);
+}
+
+/* responsividade extra */
+@media (max-width: 600px) {
+  .foto-perfil {
+    width: 200px;
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .sobre-titulo,
+  .projetos-titulo,
+  .contatos-titulo,
+  .curriculo-titulo {
+    font-size: 2rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.8rem;
+  }
 }
