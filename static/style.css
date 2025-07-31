@@ -1,4 +1,4 @@
-/* Reset e Configurações Gerais */
+/* Reset e configurações gerais */
 * {
   margin: 0;
   padding: 0;
@@ -36,7 +36,6 @@ footer {
   color: rgba(255, 255, 255, 0.5);
   background-color: var(--maisEscuro);
   max-width: none;
-
 }
 
 /* Navegação */
@@ -48,16 +47,116 @@ footer {
   z-index: 100;
 }
 
-.menu {
-  max-width: none;
-  display: flex;
-  list-style: none;
-  margin: 0;
-  gap: 3rem;
-  justify-content: center;
-  padding: 1.1rem;
+.menu-toggle {
+  display: none;
+  /* oculto no desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  z-index: 150;
 }
 
+.menu-toggle .hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  position: relative;
+  display: block;
+  transition: 0.3s;
+}
+
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.menu-toggle .hamburger::before {
+  top: -8px;
+}
+
+.menu-toggle .hamburger::after {
+  bottom: -8px;
+}
+
+/* botão ativo - animação X */
+.menu-toggle.ativo .hamburger {
+  background-color: transparent;
+}
+
+.menu-toggle.ativo .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu-toggle.ativo .hamburger::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+.navegacao .container {
+  position: relative;
+}
+
+/* MENU: padrão para desktop - sempre visível, horizontal */
+@media (min-width: 769px) {
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    gap: 3rem;
+    justify-content: center;
+    padding: 1.1rem;
+    max-width: none;
+    flex-direction: row;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* MENU: para dispositivos móveis (até 768px) - escondido por padrão */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    background-color: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    display: none;
+    padding: 1rem 0;
+    text-align: center;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  }
+
+  .menu.ativo {
+    display: flex;
+    /* aparece quando ativo */
+  }
+
+  .menu li {
+    margin: 0.5rem 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    /* mostra botão hamburger */
+  }
+}
+
+/* Links do menu */
 .menu-link {
   text-decoration: none;
   color: var(--claro);
@@ -81,7 +180,7 @@ footer {
   width: 100%;
 }
 
-/* Compensação do menu fixo */
+/* compensação do menu fixo */
 main {
   padding-top: 80px;
 }
