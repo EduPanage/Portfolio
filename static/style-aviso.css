@@ -1,0 +1,243 @@
+/* Reset e configurações gerais */
+
+/* Reset e configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primaria: #4f46e5;
+    --secundaria: #7c3aed;
+    --escuro: #0f172a;
+    --maisEscuro: #0a0f1c;
+    --claro: #fff;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--escuro);
+    color: var(--claro);
+    line-height: 1.6;
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    max-width: none;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: var(--maisEscuro);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    max-width: none;
+}
+
+.social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primaria);
+}
+
+/*Pagina de aviso*/
+
+.titulo-aviso {
+    text-align: center;
+    margin-top: 15rem;
+}
+
+.mensagem-aviso {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.27rem;
+}
+
+.botao-voltar {
+    background-color: var(--primaria);
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(79, 70, 229, 0.4);
+}
+
+.botao-voltar:hover {
+    background-color: var(--secundaria);
+    box-shadow: 0 8px 18px rgba(124, 58, 237, 0.6);
+}
+
+.container-botao {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 2rem 0;
+}
+
+.container-aviso {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Navegação */
+.navegacao {
+    position: fixed;
+    background-color: rgba(15, 23, 42, 0.8);
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    z-index: 150;
+}
+
+.menu-toggle .hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+.menu-toggle .hamburger::before {
+    top: -8px;
+}
+
+.menu-toggle .hamburger::after {
+    bottom: -8px;
+}
+
+.menu-toggle.ativo .hamburger {
+    background-color: transparent;
+}
+
+.menu-toggle.ativo .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.menu-toggle.ativo .hamburger::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+.navegacao .container {
+    position: relative;
+}
+
+/* MENU desktop */
+@media (min-width: 769px) {
+    .menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        gap: 3rem;
+        justify-content: center;
+        padding: 1.1rem;
+        max-width: none;
+        flex-direction: row;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* MENU mobile */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        background-color: rgba(15, 23, 42, 0.8);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: none;
+        padding: 1rem 0;
+        text-align: center;
+        border-radius: 0 0 16px 16px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    }
+
+    .menu.ativo {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 0.5rem 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Links do menu */
+.menu-link {
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.menu-link::after {
+    content: "";
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transition: width 0.6s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}

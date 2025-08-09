@@ -1,34 +1,45 @@
 <!DOCTYPE html>
-<html lang="py-br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eduardo | Portfólio</title>
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="/static/style-aviso.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-...REMOVIDO..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header>
         <nav class="navegacao" aria-label="Menu principal">
             <div class="container">
+                <button class="menu-toggle" aria-label="Abrir Menu" aria-expanded="false" aria-controls="menu">
+                    <span class="hamburger"></span>
+                </button>
                 <ul class="menu">
-                    <li><a href="#inicio" class="menu-link">Início</a></li>
-                    <li><a href="#sobre" class="menu-link">Sobre Mim</a></li>
-                    <li><a href="#projetos" class="menu-link">Projetos</a></li>
-                    <li><a href="#contatos" class="menu-link">Contato</a></li>
-                    <li><a href="#curriculo" class="menu-link">Currículo</a></li>
+                    <li><a href="/index.html#inicio" class="menu-link">Início</a></li>
+                    <li><a href="/index.html#sobre" class="menu-link">Sobre Mim</a></li>
+                    <li><a href="/index.html#projetos" class="menu-link">Projetos</a></li>
+                    <li><a href="/index.html#contatos" class="menu-link">Contato</a></li>
+                    <li><a href="/index.html#curriculo" class="menu-link">Currículo</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-        <h1>Aviso</h1>
-        <h2>O projeto está em fase de planejamento!</h2>
+        <div class="container-aviso">
+            <h1 class="titulo-aviso">Aviso</h1>
+            <h2 class="mensagem-aviso">O projeto está em fase de planejamento!</h2>
+            <div class="container-botao">
+                <a href="/index.html#inicio" class="botao-voltar">Voltar</a>
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 Eduardo Panage Avila. Todos os direitos reservados.</p>
     </footer>
+    <script src="static/script.js"></script>
 </body>
 
 </html>
