@@ -194,6 +194,7 @@ footer {
         flex-direction: column;
         background-color: rgba(15, 23, 42, 0.8);
         backdrop-filter: blur(10px);
+        list-style: none;
         position: absolute;
         top: 60px;
         left: 0;
